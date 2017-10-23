@@ -1,4 +1,4 @@
-package com.abc.pokercard;
+package com.abc.pokerdeck;
 
 import static org.junit.Assert.assertEquals;
 
