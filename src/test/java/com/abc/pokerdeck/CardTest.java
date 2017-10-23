@@ -1,10 +1,9 @@
 package com.abc.pokerdeck;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
-
-import com.abc.pokerdeck.Card;
 
 public class CardTest {
 
@@ -17,21 +16,25 @@ public class CardTest {
 	public void testCardException() {
 		try {
 			new Card(-1, 1);
+			fail("IllegalArgumentException expected");
 		}catch(IllegalArgumentException e) {
 		}
 		
 		try {
 			new Card(4, 2);
+			fail("IllegalArgumentException expected");
 		}catch(IllegalArgumentException e) {
 		}
 		
 		try {
 			new Card(0, 0);
+			fail("IllegalArgumentException expected");
 		}catch(IllegalArgumentException e) {
 		}
 		
 		try {
 			new Card(0, 14);
+			fail("IllegalArgumentException expected");
 		}catch(IllegalArgumentException e) {
 		}
 	}
